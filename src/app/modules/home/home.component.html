@@ -9,6 +9,7 @@
         styleClass="mt-10"
         header="Login"
         subheader="Faça o Login com sua conta existente!"
+        *ngIf="loginCard"
         >
 
         <div class="flex justify-content-center align-content-center text-align-center">
@@ -28,7 +29,9 @@
           ></button>
 
         </div>
-        <span class="flex justify-content-center align-content-center text-align-center mt-3 text-red-600 font-semibold">
+        <span class="flex justify-content-center align-content-center text-align-center mt-3 text-red-600 font-semibold cursor-pointer"
+        (click)="loginCard = !loginCard"
+        >
           Criar Conta
       </span>
       </p-card>
@@ -39,6 +42,7 @@
         styleClass="mt-10"
         header="Criar conta"
         subheader="Crie já sua conta!"
+        *ngIf="!loginCard"
         >
 
         <div class="flex justify-content-center align-content-center text-align-center">
@@ -64,8 +68,9 @@
           ></button>
 
         </div>
-        <span class="flex justify-content-center align-content-center text-align-center mt-3 text-red-600 font-semibold">
-          Fazer Login
+        <span class="flex justify-content-center align-content-center text-align-center mt-3 text-red-600 font-semibold cursor-pointer"
+        (click)="loginCard = !loginCard"
+        >Fazer Login
       </span>
       </p-card>
        </form>
