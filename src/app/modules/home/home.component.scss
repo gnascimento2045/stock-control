@@ -1,0 +1,14 @@
+.grid{ //CONFIGURADO POSIÇÃO DO PAPEL DE PAREDE TELA LOGIN
+  background-image: url('../../../assets/wallpaper.webp')!important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vmin;
+}
+
+@media screen and (min-width: 1400) { //CONFIGURADO POSIÇÃO DO PAPEL DE PAREDE TELA LOGIN
+  .grid{
+    background-position: top;
+  }
+
+}
