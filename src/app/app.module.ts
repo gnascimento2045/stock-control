@@ -7,10 +7,12 @@ import { HttpClientModule } from "@angular/common/http" //importado biblioteca
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './modules/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
