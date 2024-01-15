@@ -11,5 +11,5 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  signupUser(){requestDatas: SignupUserRequest}
+  signupUser(requestDatas: SignupUserRequest){}
 }
