@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { enviroment } from 'src/enviroments/enviroment';
 import { SignupUserRequest } from './../../models/user/SignupUserRequest';
 import { Observable } from 'rxjs';
+import { SignupUserResponse } from 'src/app/models/user/signupUserResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,12 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  signupUser(requestDatas: SignupUserRequest):Observable<>{}
+//METODO DE CRIAR USUARIO IMPLEMENTADO
+  signupUser(requestDatas: SignupUserRequest):Observable<SignupUserResponse>{
+    return this.http.post<SignupUserResponse>(
+      `${this.API_URL}/user`,
+      requestDatas
+    );
+  }
 
 }
