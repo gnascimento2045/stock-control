@@ -23,7 +23,13 @@ export class UserService {
     );
   }
 
+
+//METODO DE AUTENTICAR USUARIO IMPLEMENTADO
 authUser(requestDatas:authRequest):Observable<authResponse>{
+  return this.http.post<authResponse>(
+    `${this.API_URL}auth`,
+    requestDatas
+  );
 
 }
 
