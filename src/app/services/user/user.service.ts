@@ -4,6 +4,8 @@ import { enviroment } from 'src/enviroments/enviroment';
 import { SignupUserRequest } from './../../models/user/SignupUserRequest';
 import { Observable } from 'rxjs';
 import { SignupUserResponse } from 'src/app/models/user/signupUserResponse';
+import { authRequest } from 'src/app/models/user/auth/authRequest';
+import { authResponse } from 'src/app/models/user/auth/authResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +23,7 @@ export class UserService {
     );
   }
 
-authUser(requestDatas){
+authUser(requestDatas:authRequest):Observable<authResponse>{
 
 }
 
