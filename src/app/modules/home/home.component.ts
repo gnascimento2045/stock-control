@@ -1,8 +1,10 @@
-import { UserService } from './../../services/user/user.service';
+import { UserService } from 'src/app/services/user/user.service';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { SignupUserRequest } from 'src/app/models/user/SignupUserRequest';
+import { authRequest } from 'src/app/models/user/auth/authRequest';
 import { SignupUserResponse } from 'src/app/models/user/signupUserResponse';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-home',
@@ -23,11 +25,20 @@ export class HomeComponent {
     password:['',Validators.required]
   })
 
-  constructor(private formBuilder: FormBuilder, private UserService: UserService){}
+  constructor(private formBuilder: FormBuilder, private UserService: UserService, private cookieService: CookieService){}
 
   onSubmitLoginForm(): void {
-      console.log('DADOS DO FORMULÁRIO DE LOGIN', this.loginForm.value);
-  };
+    if (this.loginForm.value && this.loginForm.valid){
+    this.UserService.authUser(this.loginForm.value as authRequest)
+    .subscribe({
+      next: (response) =>{
+        if (response){
+          this.cookieService.set('USER_INFO', response?.token);
+        }
+      }
+    })
+  }
+  }
 
   onSubmitSignUpForm(): void {
   if (this.signupForm.value && this.signupForm.valid){
