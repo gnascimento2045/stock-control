@@ -37,6 +37,8 @@ export class HomeComponent {
         next: (response) =>{
           if (response){
           alert('Usuario criado com sucesso');
+          this.signupForm.reset();
+          this.loginCard = true;
         }
       },
       error: (err) => console.log(err),
