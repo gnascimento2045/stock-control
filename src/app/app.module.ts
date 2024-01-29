@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; //importado biblioteca
 import { HttpClientModule } from "@angular/common/http" //importado biblioteca
+import { CookieService } from 'ngx-cookie';
 
 //IMPORTANDO BIBLIOTECA PRIMENG
 import { CardModule } from "primeng/card"
@@ -32,7 +33,7 @@ import { ToastModule } from "primeng/toast"
     ButtonModule, //BOTOES
     ToastModule //NOTIFICAÇOES PARA USUARIO DE LOGIN EFETUADO OU FALHA
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
