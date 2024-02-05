@@ -7,14 +7,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; //importado biblioteca
 import { HttpClientModule } from "@angular/common/http" //importado biblioteca
-import { CookieService } from 'ngx-cookie';
+import { CookieService } from 'ngx-cookie-service';
 
 //IMPORTANDO BIBLIOTECA PRIMENG
 import { CardModule } from "primeng/card"
 import { InputTextModule } from "primeng/inputtext"
 import { ButtonModule } from "primeng/button"
 import { ToastModule } from "primeng/toast"
-
 
 @NgModule({
   declarations: [
