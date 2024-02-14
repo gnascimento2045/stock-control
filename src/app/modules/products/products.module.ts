@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
-//PRIME
+//PRIMENG
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
@@ -19,13 +19,21 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { TooltipModule } from 'primeng/tooltip';
 import { ConfirmationService } from 'primeng/api';
 
+//IMPORTS DE COMPONENTES
+import { SharedModule } from 'src/app/shared/shared.module';
+import { ProductsHomeComponent } from './page/products-home/products-home.component';
+import { PRODUCTS_ROUTE } from './products.routing';
+
 @NgModule({
-  declarations: [],
+  declarations: [
+    ProductsHomeComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    RouterModule.forChild(PRODUCTS_ROUTE),
     HttpClientModule,
     //PRIMENG
     CardModule,
