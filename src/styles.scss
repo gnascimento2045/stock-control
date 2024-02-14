@@ -164,7 +164,10 @@
 
 .exact_route {
   button {
-    background-color: #6372c3 !important;
+    background-color: #ff3c00 !important;
+    border-style: solid;
+    border-width: 0.8625rem;
+    border-radius: 1.5875rem;
   }
 
   :host ::ng-deep .p-dropdown {
