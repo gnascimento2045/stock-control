@@ -13,12 +13,14 @@ import { MessageService } from 'primeng/api';
 import { CardModule } from "primeng/card"
 import { InputTextModule } from "primeng/inputtext"
 import { ButtonModule } from "primeng/button"
-import { ToastModule } from "primeng/toast"
+import { ToastModule } from "primeng/toast";
+import { DashboardHomeComponent } from './dashboard/page/dashboard-home/dashboard-home.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DashboardHomeComponent
   ],
   imports: [
     BrowserModule,
