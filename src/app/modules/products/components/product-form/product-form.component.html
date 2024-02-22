@@ -1,38 +1,35 @@
-<!-- FORMULARIO DE NOVO PRODUTOR -->
+<!-- FORMULÁRIO DE NOVO PRODUTO -->
 <div>
-  <form
-    [formGroup]="addProductForm"
-    (ngSubmit)="(handleSubmitAddProduct)"
-  ></form>
-  <div class="card flex flex-column md:flex-column gap-3">
-    <!-- Nome do produto -->
-    <input pInputText placeholder="Nome" formControlName="name" />
-    <!-- Categoria -->
-    <p-dropdown
-      styleClass="w-full"
-      [options]="categoriesDatas"
-      [(ngModel)]="selectedCategory"
-      optionLabel="name"
-      optionValue="id"
-      placeholder="Selecione uma Categoria"
-      formControlName="category_id"
-    ></p-dropdown>
-     <!-- Preço -->
-     <input pInputText placeholder="Preço" formControlName="price" />
-     <!-- Descrição do produto -->
-     <input pInputText placeholder="Descrição" formControlName="description" />
-     <!-- Quantidade do produto -->
-     <p-inputNumber placeholder="Quantidade" formControlName="amount" />
+  <form [formGroup]="addProductForm" (ngSubmit)="handleSubmitAddProduct()">
+    <div class="card flex flex-column md:flex-column gap-3">
+      <!-- Nome do produto -->
+      <input pInputText placeholder="Nome" formControlName="name" />
+      <!-- Categoria do produto -->
+      <p-dropdown
+        styleClass="w-full"
+        [options]="categoriesDatas"
+        [(ngModel)]="selectedCategory"
+        optionLabel="name"
+        optionValue="id"
+        placeholder="Selecione uma categoria"
+        formControlName="category_id"
+      ></p-dropdown>
+      <!-- Preço do produto -->
+      <input pInputText placeholder="Preço" formControlName="price" />
+      <!-- Descrição do produto -->
+      <input pInputText placeholder="Descrição" formControlName="description" />
+      <!-- Quantidade do produto -->
+      <input pInputText placeholder="Quantidade" formControlName="amount" />
 
-     <div class="flex flex-row justify-content-center align-content-center align-items-center m-1">
-      <p-button
-      [disabled]="!addProductForm.valid"
-      type="submit"
-      label="Concluir"
-      ></p-button>
-     </div>
-
-  </div>
+      <div class="flex flex-row justify-content-center align-content-center align-items-center m-1">
+        <p-button
+        [disabled]="!addProductForm.valid"
+        type="submit"
+        label="Concluir"
+        ></p-button>
+      </div>
+    </div>
+  </form>
 </div>
 
-<!-- FORMULARIO DE EDITAR PRODUTO -->
+<!-- FORMULÁRIO DE EDITAR PRODUTO -->
