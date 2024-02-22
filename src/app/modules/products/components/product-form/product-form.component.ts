@@ -13,6 +13,7 @@ import { ProductsService } from 'src/app/services/products/products.service';
 //IMPORT PRIMENG
 import { MessageService } from 'primeng/api';
 import { DynamicDialogConfig } from 'primeng/dynamicdialog';
+import { ProductEvent } from 'src/app/models/enums/products/product.event';
 
 @Component({
   selector: 'app-product-form',
@@ -45,6 +46,11 @@ export class ProductFormComponent implements OnInit, OnDestroy {
     description: ['', Validators.required],
     amount: [0, Validators.required],
   })
+
+  public addProductAction = ProductEvent.ADD_PRODUCT_EVENT;
+  public editProductAction = ProductEvent.EDIT_PRODUCT_EVENT;
+  public saleProductAction = ProductEvent.SALE_PRODUCT_EVENT;
+
 
   constructor(
     private categoriesService: CategoriesService,

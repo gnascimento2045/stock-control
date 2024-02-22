@@ -1,5 +1,5 @@
 <!-- FORMULÁRIO DE NOVO PRODUTO -->
-<div>
+<div *ngIf="productAction?.event?.action === addProductAction">
   <form [formGroup]="addProductForm" (ngSubmit)="handleSubmitAddProduct()">
     <div class="card flex flex-column md:flex-column gap-3">
       <!-- Nome do produto -->
@@ -33,3 +33,26 @@
 </div>
 
 <!-- FORMULÁRIO DE EDITAR PRODUTO -->
+
+<div *ngIf="productAction?.event?.action === editProductAction">
+  <form [formGroup]="editProductForm" (ngSubmit)="handleSubmitEditProduct()">
+    <div class="card flex flex-column md:flex-column gap-3">
+            <!-- Nome do produto -->
+            <input pInputText placeholder="Nome" formControlName="name"/>
+            <!-- preço do produto -->
+            <input pInputText placeholder="Preço" formControlName="price"/>
+            <!-- descrição do produto -->
+            <input pInputText placeholder="Descrição" formControlName="description"/>
+            <!-- quantidade de produtos-->
+            <input pInputText type="number" placeholder="Quantidade" formControlName="amount"/>
+
+            <div class="flex flex-row justify-content-center align-content-center align-items-center m-1">
+              <p-button
+              [disabled]="!addProductForm.valid"
+              type="submit"
+              label="Concluir"
+              ></p-button>
+          </div>
+      </div>
+  </form>
+</div>
