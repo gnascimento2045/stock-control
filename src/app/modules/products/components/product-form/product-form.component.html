@@ -21,11 +21,13 @@
       <!-- Quantidade do produto -->
       <input pInputText placeholder="Quantidade" formControlName="amount" />
 
-      <div class="flex flex-row justify-content-center align-content-center align-items-center m-1">
+      <div
+        class="flex flex-row justify-content-center align-content-center align-items-center m-1"
+      >
         <p-button
-        [disabled]="!addProductForm.valid"
-        type="submit"
-        label="Concluir"
+          [disabled]="!addProductForm.valid"
+          type="submit"
+          label="Concluir"
         ></p-button>
       </div>
     </div>
@@ -37,22 +39,41 @@
 <div *ngIf="productAction?.event?.action === editProductAction">
   <form [formGroup]="editProductForm" (ngSubmit)="handleSubmitEditProduct()">
     <div class="card flex flex-column md:flex-column gap-3">
-            <!-- Nome do produto -->
-            <input pInputText placeholder="Nome" formControlName="name"/>
-            <!-- preço do produto -->
-            <input pInputText placeholder="Preço" formControlName="price"/>
-            <!-- descrição do produto -->
-            <input pInputText placeholder="Descrição" formControlName="description"/>
-            <!-- quantidade de produtos-->
-            <input pInputText type="number" placeholder="Quantidade" formControlName="amount"/>
-
-            <div class="flex flex-row justify-content-center align-content-center align-items-center m-1">
-              <p-button
-              [disabled]="!editProductForm.valid"
-              type="submit"
-              label="Concluir"
-              ></p-button>
-          </div>
+      <!-- Nome do produto -->
+      <input pInputText placeholder="Nome" formControlName="name" />
+      <!-- Categoria do produto -->
+      <div *ngIf="renderDropdown">
+        <p-dropdown
+          styleClass="w-full"
+          [options]="categoriesDatas"
+          [(ngModel)]="selectedCategory"
+          optionLabel="name"
+          optionValue="id"
+          formControlName="category_id"
+        ></p-dropdown>
       </div>
+
+      <!-- preço do produto -->
+      <input pInputText placeholder="Preço" formControlName="price" />
+      <!-- descrição do produto -->
+      <input pInputText placeholder="Descrição" formControlName="description" />
+      <!-- quantidade de produtos-->
+      <input
+        pInputText
+        type="number"
+        placeholder="Quantidade"
+        formControlName="amount"
+      />
+
+      <div
+        class="flex flex-row justify-content-center align-content-center align-items-center m-1"
+      >
+        <p-button
+          [disabled]="!editProductForm.valid"
+          type="submit"
+          label="Concluir"
+        ></p-button>
+      </div>
+    </div>
   </form>
 </div>
