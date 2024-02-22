@@ -4,7 +4,7 @@ import { CategoriesService } from './../../../../services/categories/categories.
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
-import { GetCategoriesResponse } from 'src/app/models/interfaces/categories/response/getCategoriesResponse';
+import { GetCategoriesResponse } from 'src/app/models/interfaces/categories/response/GetCategoriesResponse';
 
 @Component({
   selector: 'app-product-form',

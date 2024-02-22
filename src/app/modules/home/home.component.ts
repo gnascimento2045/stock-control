@@ -49,8 +49,8 @@ export class HomeComponent implements OnDestroy {
             this.router.navigate(['/dashboard']);
 
             this.messageService.add({
-              severity: 'sucesso',
-              summary: 'sucesso',
+              severity: 'success',
+              summary: 'Sucesso',
               detail: `Bem vindo de volta ${response?.name}`,
               life: 2000,
             });
@@ -80,10 +80,10 @@ export class HomeComponent implements OnDestroy {
               this.signupForm.reset();
               this.loginCard = true;
               this.messageService.add({
-                severity: 'sucesso',
+                severity: 'success',
                 summary: 'Sucesso',
                 detail: `Usuario cadastrado com sucesso`,
-                life: 2000,
+                life: 2500,
               });
             }
           },
@@ -92,7 +92,7 @@ export class HomeComponent implements OnDestroy {
               severity: 'error',
               summary: 'Error',
               detail: `Erro ao criar usuario.`,
-              life: 2000,
+              life: 2500,
             });
             console.log(err)},
         });
