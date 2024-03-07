@@ -1,1 +1,7 @@
-<p>categories-home works!</p>
+<app-toolbar-navigation></app-toolbar-navigation>
+
+<app-categories-table
+  [categories]="categoriesDatas"
+  (deleteCategoryEvent)="handleDeleteCategoryAction($event)"
+  (categoryEvent)="handleCategoryAction($event)"
+></app-categories-table>
