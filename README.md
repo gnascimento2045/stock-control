@@ -1,27 +1,17 @@
-# StockControl
+**Sistema de Controle de Estoque - Stock Control**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+**Descrição Geral:** O Sistema de Controle de Estoque é uma aplicação robusta e intuitiva, projetada para gerenciar, monitorar e otimizar os processos de estoque de uma empresa. Ele oferece uma visão clara e em tempo real de todos os produtos disponíveis, entradas e saídas, facilitando a gestão de inventário e a tomada de decisões estratégicas. O sistema também é ideal para empresas de diferentes portes e segmentos, oferecendo funcionalidades personalizáveis para atender a diversas necessidades.
 
-## Development server
+**Funcionalidades Principais:**
+Gestão de Produtos:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Cadastro de Produtos:** Adicione, edite ou remova produtos do estoque com informações detalhadas como nome, categoria, código de barras, quantidade, preço de custo, preço de venda e descrição.
+Controle de Quantidade: Acompanhe a quantidade de cada produto disponível no estoque, com visualizações claras sobre o estoque mínimo e máximo.
+Registro de Entradas e Saídas:
 
-## Code scaffolding
+**Entradas:** Registre novas entradas de produtos no estoque, incluindo compras, devoluções e transferências de outras filiais.
+Saídas: Monitore a saída de produtos, seja por vendas, transferências ou ajustes de estoque. O sistema mantém um histórico de cada transação.
+Alertas de Estoque:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Notificações de Estoque Baixo: Receba alertas automáticos quando a quantidade de um produto atingir o estoque mínimo definido, evitando faltas de produtos importantes.
+Validade de Produtos: Acompanhe a data de validade dos produtos perecíveis e receba notificações para produtos próximos da expiração.
